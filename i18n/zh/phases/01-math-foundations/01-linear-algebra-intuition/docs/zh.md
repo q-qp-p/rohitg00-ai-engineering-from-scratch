@@ -113,7 +113,7 @@ $v_1$其他$v_2$它们是独立的,也不是一个规模乘数,也不是一个�
 
 | Situation | Rank | What it means for ML |
 |-----------|------|---------------------|
-| Full rank $(\text{rank} = \min(m, n))$ | Maximum possible | Unique least-squares solution exists. Model is well-conditioned. |
+| Full rank $(\text{rank} = \min(m, n))$ | Maximum possible | With at least as many rows as columns (full column rank), the least-squares solution is unique. With fewer rows than columns, infinitely many solutions fit exactly. |
 | Rank deficient $(\text{rank} < \min(m, n))$ | Below maximum | Features are redundant. Infinitely many weight solutions. Regularization needed. |
 | Rank 1 | 1 | Every column is a scaled copy of one vector. All data lies on a line. |
 | Near rank-deficient (small singular values) | Numerically low | Matrix is ill-conditioned. Tiny input noise causes large output changes. Use SVD truncation or ridge regression. |
